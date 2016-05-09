@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="game.libretro.pocketsnes"
+		name="SNES (PocketSNES)"
+		version="7.2.0"
+		provider-name="Libretro">
+	<requires>
+		<import addon="game.libretro" version="1.0.0"/>
+		<import addon="game.controller.snes" version="1.0.0"/>
+	</requires>
+	<extension point="kodi.gameclient"
+                   library_android="libgame.libretro.pocketsnes.so"
+                   library_linux="game.libretro.pocketsnes.so"
+                   library_osx="game.libretro.pocketsnes.dylib"
+                   library_windx="game.libretro.pocketsnes.dll"
+                   library_wingl="game.libretro.pocketsnes.dll">
+		<platforms>SNES</platforms>
+		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc|zip</extensions>
+		<supports_game_loop>false</supports_game_loop>
+		<supports_vfs>true</supports_vfs>
+		<supports_standalone>false</supports_standalone>
+		<supports_keyboard>false</supports_keyboard>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">PocketSNES v7.2.0</summary>
+		<description> Port of SNES9x 1.39 for libretro. Heavily optimized for ARM.
+
+Supported files: smc, fig, sfc, gd3, gd7, dx2, bsx, swc, zip</description>
+		<platform>all</platform>
+		<nofanart>true</nofanart>
+	</extension>
+</addon>
