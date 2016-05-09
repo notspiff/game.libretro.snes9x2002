@@ -1,4 +1,4 @@
-From 72ce0b044621b2a6b8c06eaef59349d24caf2f71 Mon Sep 17 00:00:00 2001
+From cbce6d889225fbe771213bc1f1e3f7a5fcb54986 Mon Sep 17 00:00:00 2001
 From: Garrett Brown <themagnificentmrb@gmail.com>
 Date: Mon, 9 May 2016 15:29:19 -0700
 Subject: [PATCH] Fix compilation
@@ -8,18 +8,18 @@ Subject: [PATCH] Fix compilation
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index 85e2a82..1e224fa 100644
+index 85e2a82..05eb560 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -129,7 +129,7 @@ CFLAGS += $(DEFINES) $(COMMON_DEFINES) $(INCLUDES)
+@@ -125,7 +125,7 @@ OBJS := $(OBJS:.cpp=.o)
+ OBJS := $(OBJS:.S=.o)
+ OBJS := $(OBJS:.s=.o)
+ 
+-CFLAGS += $(DEFINES) $(COMMON_DEFINES) $(INCLUDES)
++CFLAGS += $(DEFINES) $(COMMON_DEFINES) $(INCLUDES) -std=gnu11
  
  
  ifeq ($(platform), theos_ios)
--COMMON_FLAGS := -DIOS $(COMMON_DEFINES) $(INCFLAGS) -I$(THEOS_INCLUDE_PATH) -Wno-error
-+COMMON_FLAGS := -DIOS $(COMMON_DEFINES) $(INCFLAGS) -I$(THEOS_INCLUDE_PATH) -Wno-error -std=gnu11
- $(LIBRARY_NAME)_CFLAGS += $(CFLAGS) $(COMMON_FLAGS)
- $(LIBRARY_NAME)_CXXFLAGS += $(CXXFLAGS) $(COMMON_FLAGS)
- ${LIBRARY_NAME}_FILES = $(SOURCES_CXX) $(SOURCES_C)
 -- 
 2.5.0
 
