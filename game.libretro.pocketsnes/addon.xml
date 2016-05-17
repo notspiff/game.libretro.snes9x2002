@@ -21,7 +21,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">PocketSNES v7.2.0</summary>
-		<description> Port of SNES9x 1.39 for libretro. Heavily optimized for ARM.
+		<description>Port of SNES9x 1.39 for libretro. Heavily optimized for ARM.
 
 Supported files: smc, fig, sfc, gd3, gd7, dx2, bsx, swc, zip</description>
 		<license>Non-commercial</license>
