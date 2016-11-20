@@ -1,1 +1,0 @@
-pocketsnes https://github.com/libretro/pocketsnes-libretro master

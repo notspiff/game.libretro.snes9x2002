@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.1)
-project(pocketsnes)
+project(snes9x2002)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 
@@ -37,12 +37,12 @@ externalproject_add(${PROJECT_NAME}
                     BUILD_IN_SOURCE 1)
 
 #install the generated shared library
-SET(LIBRETRO_LIBRARY pocketsnes_libretro${CMAKE_SHARED_LIBRARY_SUFFIX})
+set(LIBRETRO_LIBRARY ${PROJECT_NAME}_libretro${CMAKE_SHARED_LIBRARY_SUFFIX})
 
 install(FILES ${PROJECT_SOURCE_DIR}/${LIBRETRO_LIBRARY}
         DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
-SET(LIBRARY_DEFINE POCKETSNES_LIB)
+set(LIBRARY_DEFINE SNES9X2002_LIB)
 
 # write the *config.cmake script
 file(WRITE ${CMAKE_INSTALL_PREFIX}/libretro-${PROJECT_NAME}-config.cmake "set(${LIBRARY_DEFINE} ${CMAKE_INSTALL_PREFIX}/lib/${LIBRETRO_LIBRARY})")
