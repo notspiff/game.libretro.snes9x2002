@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.snes9x2002"
-		name="SNES (Snes9x 2002)"
+		name="SNES (Snes9x 2002 - ARM)"
 		version="7.2.0"
 		provider-name="Libretro">
 	<requires>
