@@ -10,21 +10,18 @@
 	<extension point="kodi.gameclient"
 			library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms>SNES</platforms>
-		<extensions>smc|fig|sfc|gd3|gd7|dx2|bsx|swc</extensions>
-		<supports_vfs>true</supports_vfs>
+		<extensions></extensions>
+		<supports_vfs>false</supports_vfs>
 		<supports_standalone>false</supports_standalone>
 		<supports_keyboard>false</supports_keyboard>
 		<supports_mouse>false</supports_mouse>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">SNES / Super Famicom (Snes9x 2002) 7.2.0</summary>
+		<summary lang="en">SNES / Super Famicom (Snes9x 2002)</summary>
 		<description>Port of SNES9x 1.39 for libretro (was previously called PocketSNES). Heavily optimized for ARM.
 
 Supported files: smc, fig, sfc, gd3, gd7, dx2, bsx, swc, zip</description>
 		<license>Non-commercial</license>
 		<platform>@PLATFORM@</platform>
-		<assets>
-			<icon>resources/icon.png</icon>
-		</assets>
 	</extension>
 </addon>
